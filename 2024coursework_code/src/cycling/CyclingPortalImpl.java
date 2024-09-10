@@ -550,8 +550,8 @@ public class CyclingPortalImpl implements CyclingPortal {
 		else if(riderIdObj.get(riderId) == null){
 			throw new IDNotRecognisedException("ID not attached to a rider");
 		}
-		else if(stagePreparation.get(stageId) == "waiting for results"){
-			throw new InvalidStageStateException("Stage is waiting for results");
+		else if(stagePreparation.get(stageId) == "Preparing"){
+			throw new InvalidStageStateException("Stage is not prepared");
 		}
 		else if((stageRiders.get(stageId)).get(riderId) != null){
 			throw new DuplicatedResultException("This rider already has a result in this stage");
